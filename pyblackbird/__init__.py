@@ -228,7 +228,7 @@ def get_blackbird(url, use_serial=True):
         @synchronized
         def zone_status(self, zone: int):
             # Returns status of a zone
-            return ZoneStatus.from_string(zone, self._process_request(_format_zone_status_request(zone), skip=20))
+            return ZoneStatus.from_string(zone, self._process_request(_format_zone_status_request(zone), skip=10))
 
         @synchronized
         def set_zone_power(self, zone: int, power: bool):
